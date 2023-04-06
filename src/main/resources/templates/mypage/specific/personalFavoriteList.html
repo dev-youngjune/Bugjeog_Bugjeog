@@ -47,7 +47,7 @@
                                                     <label th:for="${interestingCompanyDTO.businessId}" style="display: block"></label>
 <!--                                                    <a class="card_wrapper" th:href="@{/board/business/list(businessId=${interestingCompanyDTO.businessId})}">-->
                                                     <header class="card_thumbnail_wrapper is-relative">
-                                                        <div style="width: 229px; height: 200px">
+                                                        <div style="width: 200px; height: 200px">
                                                             <img style="max-width: 100%; max-height: 100%; overflow: hidden" th:src="@{/mypage/profile/display(fileName=${interestingCompanyDTO.boardBusinessImgPath}+'/'+${interestingCompanyDTO.boardBusinessImgUuid}+'_'+${interestingCompanyDTO.boardBusinessImgOriginalName})}"/>
                                                         </div>
                                                             <button type="button" class="card_favorite_marker is-absolute" th:id="${interestingCompanyDTO.businessId}" data-interesting-company-id="[[interestingCompanyId]]" data-member-id="[[memberId]]">
