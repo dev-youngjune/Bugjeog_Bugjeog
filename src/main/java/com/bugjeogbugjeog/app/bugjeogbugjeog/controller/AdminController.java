@@ -70,7 +70,7 @@ public class AdminController {
     @PostMapping("admin-memberModify")
     public RedirectView adminMemberModify(MemberVO memberVO){
         memberService.updateMember(memberVO);
-        return new RedirectView("/admins/admin-member/" + memberVO.getMemberId());
+        return new RedirectView("/admin/admin-member/" + memberVO.getMemberId());
     }
 
     /* 회원 삭제 */
@@ -236,7 +236,7 @@ public class AdminController {
     @ResponseBody
     public void removeDistribution(@RequestParam("checkedIds[]")List<Long> checkIds){
         for (int i=0; i < checkIds.size(); i++){
-//            businessBoardService.remove(checkIds.get(i));
+            businessBoardService.remove(checkIds.get(i));
         }
     }
 
