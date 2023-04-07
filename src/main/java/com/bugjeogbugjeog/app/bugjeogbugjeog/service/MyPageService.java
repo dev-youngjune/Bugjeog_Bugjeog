@@ -68,9 +68,9 @@ public class MyPageService {
 
     // sms 발송 서비스
     public String memberSMS(String memberPhoneNumber){
-        String apiKey = "NCSNGJZ3GODMTOK9";
-        String apiSecret = "XHPDA2WDFAT5S3JGDF1A4SROWRWZXD5E";
-        String fromNumber = "01036758324";
+        String apiKey = "";
+        String apiSecret = "";
+        String fromNumber = "";
         String code = "";
 
         Random random = new Random();
