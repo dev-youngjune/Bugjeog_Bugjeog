@@ -62,4 +62,8 @@ public interface ReplyMapper {
 
     // 게시물의 댓글 갯수
     public Integer replyCountFreeBoard(Long boardFreeId);
+
+    public List<Long> replyPageCount(Long memberId);
+
+    public List<Long> businessReplyPageCount(Long businessId);
 }

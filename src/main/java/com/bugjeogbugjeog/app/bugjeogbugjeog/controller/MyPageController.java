@@ -88,7 +88,7 @@ public class MyPageController {
         model.addAttribute("memberVOs", boardReplyDTO.getMemberVOS());
         model.addAttribute("businessVOs", boardReplyDTO.getBusinessVOS());
         model.addAttribute("boardFreeVOS",boardReplyDTO.getBoardFreeVOS());
-        model.addAttribute("pageDTO", new PageDTO(criteria, myPageService.replyBoardFreeCount(memberId, criteria)));
+        model.addAttribute("pageDTO", new PageDTO(criteria, myPageService.replyPageCount(memberId)));
     }
 
     // 자유게시판 작성 목록
