@@ -95,4 +95,11 @@ public class ReplyDAO {
         return replyMapper.replyCountFreeBoard(boardFreeId);
     }
 
+    public List<Long> replyPageCount(Long memberId){
+        return replyMapper.replyPageCount(memberId);
+    }
+
+    public List<Long> businessReplyPageCount(Long businessId){
+        return replyMapper.businessReplyPageCount(businessId);
+    }
 }
