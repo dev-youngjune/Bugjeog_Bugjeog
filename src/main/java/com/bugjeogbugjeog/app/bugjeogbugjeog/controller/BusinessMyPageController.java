@@ -78,7 +78,7 @@ public class BusinessMyPageController {
         model.addAttribute("memberVOs", boardReplyDTO.getMemberVOS());
         model.addAttribute("businessVOs", boardReplyDTO.getBusinessVOS());
         model.addAttribute("boardFreeVOS",boardReplyDTO.getBoardFreeVOS());
-        model.addAttribute("pageDTO", new PageDTO(criteria, businessMyPageService.businessReplyBoardFreeCount(businessId, criteria)));
+        model.addAttribute("pageDTO", new PageDTO(criteria, businessMyPageService.businessReplyBoardCount(businessId)));
     }
 
     // 좋아요 한 게시물목록

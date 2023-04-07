@@ -68,9 +68,9 @@ public class MyPageService {
 
     // sms 발송 서비스
     public String memberSMS(String memberPhoneNumber){
-        String apiKey = "";
-        String apiSecret = "";
-        String fromNumber = "";
+        String apiKey = "NCSNGJZ3GODMTOK9";
+        String apiSecret = "XHPDA2WDFAT5S3JGDF1A4SROWRWZXD5E";
+        String fromNumber = "01036758324";
         String code = "";
 
         Random random = new Random();
@@ -189,6 +189,10 @@ public class MyPageService {
     // 각 보드의 댓글 리스트
     public List<FreeReplyVO> replyList(Long boardFreeId){
         return replyDAO.findAllFreeReplyToMember(boardFreeId);
+    }
+
+    public Integer replyPageCount(Long memberId){
+        return replyDAO.replyPageCount(memberId).size();
     }
 
     // 댓글 갯수
