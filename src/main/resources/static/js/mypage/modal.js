@@ -73,3 +73,7 @@ $passwordModalExit.each((i, e) => {
         $passwordModal.hide();
     });
 });
+
+$(".button_logout").click(function () {
+    location.href="/member/logout";
+});
