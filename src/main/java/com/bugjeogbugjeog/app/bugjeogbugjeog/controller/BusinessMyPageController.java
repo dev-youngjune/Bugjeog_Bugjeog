@@ -51,8 +51,9 @@ public class BusinessMyPageController {
         HttpSession session = req.getSession();
         Long businessId = (Long) session.getAttribute("businessId");
 
+        session.removeAttribute("businessId");
         businessMyPageService.businessWithdraw(businessId);
-        return new RedirectView("/main/main");
+        return new RedirectView("/main/");
     }
 
     // 자유게시판 작성 목록
