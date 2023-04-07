@@ -62,7 +62,7 @@ public class MyPageController {
         myPageService.memberWithdraw(memberId);
         session.removeAttribute("memberId");
 
-        return new RedirectView("/main");
+        return new RedirectView("/main/");
     }
 
     // faq 리스트
@@ -88,7 +88,7 @@ public class MyPageController {
         model.addAttribute("memberVOs", boardReplyDTO.getMemberVOS());
         model.addAttribute("businessVOs", boardReplyDTO.getBusinessVOS());
         model.addAttribute("boardFreeVOS",boardReplyDTO.getBoardFreeVOS());
-        model.addAttribute("pageDTO", new PageDTO(criteria, myPageService.replyBoardFreeCount(memberId, criteria)));
+        model.addAttribute("pageDTO", new PageDTO(criteria, myPageService.replyPageCount(memberId)));
     }
 
     // 자유게시판 작성 목록
