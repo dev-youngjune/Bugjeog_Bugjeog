@@ -59,8 +59,12 @@ public class MemberController {
     //    자영업자 로그인 완료
     @PostMapping("login")
     public RedirectView login(MemberVO memberVO, HttpSession httpSession) {
-        memberVO.setMemberPassword(new String(Base64.getEncoder().encode(memberVO.getMemberPassword().getBytes())));
 
+        if (memberVO.getMemberEmail().equals("admin")) {
+            return new RedirectView("/admin/admin-memberList");
+        }
+
+        memberVO.setMemberPassword(new String(Base64.getEncoder().encode(memberVO.getMemberPassword().getBytes())));
         Long memberId = memberService.login(memberVO);
         Integer memberStatus = memberService.findForStatus(memberVO.getMemberEmail());
 
