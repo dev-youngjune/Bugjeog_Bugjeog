@@ -125,6 +125,10 @@ public class BusinessMyPageService {
         return replyDAO.findAllBoardFreeToBusiness(businessId,criteria).size();
     }
 
+    public Integer businessReplyBoardCount(Long businessId){
+        return replyDAO.businessReplyPageCount(businessId).size();
+    }
+
     // 유통업자의 각 보드의 댓글 리스트
     public List<FreeReplyVO> businessReplyList(Long businessId, Long boardFreeId){
         return replyDAO.findAllFreeReplyToBusiness(businessId, boardFreeId);

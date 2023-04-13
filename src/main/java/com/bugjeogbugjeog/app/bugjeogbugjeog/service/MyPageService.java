@@ -191,6 +191,10 @@ public class MyPageService {
         return replyDAO.findAllFreeReplyToMember(boardFreeId);
     }
 
+    public Integer replyPageCount(Long memberId){
+        return replyDAO.replyPageCount(memberId).size();
+    }
+
     // 댓글 갯수
     public Integer replyCount(Long memberId){
         return replyDAO.getReplyTotal(memberId);

@@ -51,8 +51,9 @@ public class BusinessMyPageController {
         HttpSession session = req.getSession();
         Long businessId = (Long) session.getAttribute("businessId");
 
+        session.removeAttribute("businessId");
         businessMyPageService.businessWithdraw(businessId);
-        return new RedirectView("/main/main");
+        return new RedirectView("/main/");
     }
 
     // 자유게시판 작성 목록
@@ -77,7 +78,7 @@ public class BusinessMyPageController {
         model.addAttribute("memberVOs", boardReplyDTO.getMemberVOS());
         model.addAttribute("businessVOs", boardReplyDTO.getBusinessVOS());
         model.addAttribute("boardFreeVOS",boardReplyDTO.getBoardFreeVOS());
-        model.addAttribute("pageDTO", new PageDTO(criteria, businessMyPageService.businessReplyBoardFreeCount(businessId, criteria)));
+        model.addAttribute("pageDTO", new PageDTO(criteria, businessMyPageService.businessReplyBoardCount(businessId)));
     }
 
     // 좋아요 한 게시물목록

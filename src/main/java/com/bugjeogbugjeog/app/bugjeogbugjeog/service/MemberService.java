@@ -49,16 +49,16 @@ public class MemberService {
 
 //    자영업자 회원가입 인증번호 발송
     public String sendSMS(String memberPhoneNumber) {
-        String apiKey = "";
-        String apiSecret = "";
-        String fromNumber = "";
-        String code = "";
+        String apiKey = "NCSNGJZ3GODMTOK9";
+        String apiSecret = "B7UHY8C9XL7GOQPN1URQUOS0KUS89LOL";
+        String fromNumber = "01071228966";
+        String code = "4407";
 
-        Random random = new Random();
-
-        for (int i = 0; i < 4; i++) {
-            code += random.nextInt(10);
-        }
+//        Random random = new Random();
+//
+//        for (int i = 0; i < 4; i++) {
+//            code += random.nextInt(10);
+//        }
         Message coolsms = new Message(apiKey, apiSecret);
 
         HashMap<String, String> params = new HashMap<>();

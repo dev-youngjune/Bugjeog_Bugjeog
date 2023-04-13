@@ -144,7 +144,7 @@
 		})
 	};
 
-	/* 페이지 찾기 */
+	/* 페이지 찾기 */		/**/
 	function findPage(currentPage) {
 		page = currentPage.dataset.page;
 		page *= 1;
@@ -267,7 +267,7 @@
 							<thead>
 									<tr>
 										<th>
-											<input type="checkbox" name="check" id="allSelect">
+											<input type="checkbox" name="check" id="allSelect" onclick="isAllChecked(this)">
 										</th>
 										<th>No</th>
 										<th>대표이름</th>
